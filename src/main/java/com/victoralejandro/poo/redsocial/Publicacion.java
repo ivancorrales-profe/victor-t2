@@ -7,24 +7,15 @@ public class Publicacion {
 	private LocalTime hora;
 	private int numeroLikes;
 
-	public void Mostrar() {
-		this.texto = texto;
-		this.hora = hora;
-		this.numeroLikes = numeroLikes;
-		System.out.println(texto);
+	public void mostrar() {
+		System.out.println(texto + hora + numeroLikes);
 	}
 
-	public void DarMeGusta() {
+	public void darMeGusta() {
 		numeroLikes += 1;
 	}
 
-	public int NumeroLikes() {
+	public int numeroLikes() {
 		return numeroLikes;
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

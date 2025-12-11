@@ -1,4 +1,4 @@
-package com.victoralejandro.poo.redsocial; 
+package com.victoralejandro.poo.redsocial;
 
 public class PerfilRedSocial {
 	private String nombreUsuario;
@@ -7,19 +7,25 @@ public class PerfilRedSocial {
 	private String ciudad;
 	private int numeroSeguidores;
 	private int numeroPublicaciones;
-	private EstadoPerfil estadoPerfil;
+	private EstadoPerfil estadoActual;
 	private boolean cuentaVerificada;
-	
-	public void MostrarInformacion () {
-		System.out.println(nombreUsuario + nombreVisible + biografia + ciudad + numeroSeguidores + numeroPublicaciones + estadoPerfil + cuentaVerificada);
+
+	public void mostrarInformacion() {
+		System.out.println(nombreUsuario + nombreVisible + biografia + ciudad + numeroSeguidores + numeroPublicaciones
+				+ estadoActual + cuentaVerificada);
+	}
+
+	public void anadirSeguidores(int numeroSeguidores, int nuevosSeguidores) {
+		this.numeroSeguidores += nuevosSeguidores;
 	}
 	
-	public void AñadirSeguidores (int numeroSeguidores) {
-		private int nuevosSeguidores;
-		this.numeroSeguidores = numeroSeguidores + nuevosSeguidores;
-		return this.numeroSeguidores;
-		
+	public void estadoPerfil(EstadoPerfil estadoActual, EstadoPerfil estado){
+		if (estado == estado.ACTIVADA) {
+			estadoActual = EstadoPerfil.ACTIVADA; 
+		}else if (estado == EstadoPerfil.DESACTIVADA) {
+			estadoActual = EstadoPerfil.DESACTIVADA; 
+		}else {
+			estadoActual = EstadoPerfil.BLOQUEADA; 
+		}
 	}
 }
-		
-	
